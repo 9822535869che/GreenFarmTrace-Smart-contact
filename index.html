@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GreenFarm Trace ระบบตรวจสอบย้อนกลับ</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 54C8 28 24 10 58 6c2 32-14 52-48 48z" fill="#5fd27f"/><path d="M14 52 42 24" stroke="#0f3d2a" stroke-width="3.5" stroke-linecap="round"/></svg>
+      <div><h2>GreenFarm<br>Trace</h2><span>Blockchain for<br>Safe Agriculture</span></div>
+    </div>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"></nav>
+    <div class="side-foot">
+      <div class="shield" id="shield"></div>
+      <b>เกษตรปลอดภัย</b>
+      <span>ตรวจสอบได้ด้วย Blockchain</span>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <div class="wallet"><i class="dot"></i><span id="wallet"></span><span id="walletState">เชื่อมต่อแล้ว</span></div>
+      <button class="btn btn-sm leaf" id="scBtn" data-act="walletConnect" style="white-space:nowrap">เชื่อมต่อ Smart Contract</button>
+      <div class="userbox">
+      </div>
+    </header>
+    <main class="content" id="content"></main>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
